@@ -148,8 +148,8 @@ public class clsJuego {
 
                 ScaleBy Diastole, Sistole;
 
-                Diastole= ScaleBy.action(0.5f, -1f, -1f);
-                Sistole= ScaleBy.action(0.5f, 1f, 1f);
+                Diastole= ScaleBy.action(0.1f, -1f, -1f);
+                Sistole= ScaleBy.action(0.1f, 1f, 1f);
 
                 IntervalAction Secuencia;
                 Secuencia = Sequence.actions(Diastole, Sistole, Diastole, Sistole, Diastole, Sistole);
