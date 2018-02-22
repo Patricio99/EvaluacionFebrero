@@ -109,16 +109,16 @@ public class clsJuego {
                 if(aleatorio != aleatorio1) {
 
                     if (aleatorio1 == 1) {
-                        Auto1.runAction(RotateTo.action(1f, -360));
+                        Auto1.runAction(RotateBy.action(1f, -360));
                         Log.d("rotacion", "rota pal otro lado el rayo");
                     } else if (aleatorio1 == 2) {
-                        Auto2.runAction(RotateTo.action(1f, -360));
+                        Auto2.runAction(RotateBy.action(1f, -360));
                         Log.d("rotacion", "rota pal otro lado mate");
                     } else if (aleatorio1 == 3) {
-                        Auto3.runAction(RotateTo.action(1f, -360));
+                        Auto3.runAction(RotateBy.action(1f, -360));
                         Log.d("rotacion", "rota pal otro lado sally");
                     } else if (aleatorio1 == 4) {
-                        Auto4.runAction(RotateTo.action(1f, -360));
+                        Auto4.runAction(RotateBy.action(1f, -360));
                         Log.d("rotacion", "rota pal otro lado el sheriff");
                     }
                 }
