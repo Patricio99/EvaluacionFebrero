@@ -3,9 +3,13 @@ package com.example.a42252248.evaluacionfebrero;
 import android.util.Log;
 import android.view.MotionEvent;
 
+import org.cocos2d.actions.interval.IntervalAction;
+import org.cocos2d.actions.interval.MoveBy;
 import org.cocos2d.actions.interval.MoveTo;
 import org.cocos2d.actions.interval.RotateBy;
 import org.cocos2d.actions.interval.RotateTo;
+import org.cocos2d.actions.interval.ScaleBy;
+import org.cocos2d.actions.interval.Sequence;
 import org.cocos2d.layers.Layer;
 import org.cocos2d.nodes.Director;
 import org.cocos2d.nodes.Scene;
@@ -141,6 +145,16 @@ public class clsJuego {
                     PosIx1 += 30;
                     EnterMove = false;
                 }
+
+                ScaleBy Diastole, Sistole;
+
+                Diastole= ScaleBy.action(0.5f, -1f, -1f);
+                Sistole= ScaleBy.action(0.5f, 1f, 1f);
+
+                IntervalAction Secuencia;
+                Secuencia = Sequence.actions(Diastole, Sistole, Diastole, Sistole, Diastole, Sistole);
+                Auto4.runAction(Secuencia);
+
                 return true;
             }
 
